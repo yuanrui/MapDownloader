@@ -141,7 +141,7 @@ namespace QuickRabbitMQ.imp
             
         }
 
-        private void _channnel_ModelShutdown(IModel model, ShutdownEventArgs reason)
+        private void _channnel_ModelShutdown(Object model, ShutdownEventArgs reason)
         {
             Stop();
             var msg = "发生端channel连接断开";
@@ -152,7 +152,7 @@ namespace QuickRabbitMQ.imp
             Log.Error(msg);
         }
 
-        private void _connection_ConnectionShutdown(IConnection connection, ShutdownEventArgs reason)
+        private void _connection_ConnectionShutdown(object connection, ShutdownEventArgs reason)
         {
             Stop();
             var msg = "发生端connection连接断开";
